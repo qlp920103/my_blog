@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="47.52.76.222">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="my_blog">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <table id="7" parent="2" name="auth_group"/>
+    <table id="8" parent="2" name="auth_group_permissions"/>
+    <table id="9" parent="2" name="auth_permission"/>
+    <table id="10" parent="2" name="auth_user"/>
+    <table id="11" parent="2" name="auth_user_groups"/>
+    <table id="12" parent="2" name="auth_user_user_permissions"/>
+    <table id="13" parent="2" name="django_admin_log"/>
+    <table id="14" parent="2" name="django_content_type"/>
+    <table id="15" parent="2" name="django_migrations"/>
+    <table id="16" parent="2" name="django_session"/>
+    <table id="17" parent="2" name="q_user">
+      <Comment>用户登录信息表</Comment>
+    </table>
+    <table id="18" parent="2" name="q_user_detail">
+      <Comment>用户详细信息表</Comment>
+    </table>
+    <column id="19" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="17" name="username">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="17" name="pwd">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="17" name="raw_add_time">
+      <Position>4</Position>
+      <Comment>添加用户时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="23" parent="17" name="raw_update_time">
+      <Position>5</Position>
+      <Comment>更新密码时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="24" parent="17" name="flage">
+      <Position>6</Position>
+      <Comment>0 正常，1 禁用</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="25" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="18" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="18" name="raw_add_time">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="29" parent="18" name="mobile">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="30" parent="18" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="31" parent="18" name="introduce">
+      <Position>6</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="32" parent="18" name="nick_name">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="33" parent="18" name="raw_update_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="34" parent="18" name="last_time">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="35" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
